@@ -1,15 +1,11 @@
 'use client'
 
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 
 export default function Login() {
 
-    const router = useRouter()
-
     const OnSubmitHandler = (e) => {
         e.preventDefault()
-        router.push("/register/user-info")
     }
 
     return (
@@ -21,13 +17,13 @@ export default function Login() {
             <div classNameName="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
                 <div className="relative">
                     <div className="max-w-[500px] mx-auto bg-white rounded-sm shadow-pricing p-12 sm:p-[60px]">
-                        <div className="flex gap-3 justify-center items-center">
-                            <h3 className="font-bold text-black text-2xl sm:text-3xl text-center">Welcome to{" "}</h3>
+                    <div className="flex gap-3 justify-center items-center">
+                            <h3 className="font-bold text-black text-2xl sm:text-3xl text-center">Sign in to{" "}</h3>
                             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-gray-400 inline text-[30px] font-bold">
                                 IPOwiseAI
                             </h1>
                         </div>
-                        <p className="font-medium text-base text-body-color mb-11 text-center">Sign up to get started with learning finance </p>
+                        <p className="font-medium text-base text-body-color mb-11 text-center">Login to your account to start with your finance</p>
                         <button className="w-full flex items-center justify-center p-3 bg-white text-body-color text-base font-medium hover:text-primary rounded-sm border border-[#DEE3F7] mb-6" fdprocessedid="b6iyuk">
                             <span className="mr-3">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,11 +50,11 @@ export default function Login() {
                         <form onSubmit={(e) => OnSubmitHandler(e)}>
                             <div className="mb-8">
                                 <label for="email" className="block text-sm font-medium text-black mb-3"> Your Email </label>
-                                <input type="email" name="email" placeholder="Enter your Email" className="w-full border border-[#DEE3F7] rounded-sm py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary transition" fdprocessedid="a9h1p" />
+                                <input type="email" name="email" placeholder="Enter your Email" className="w-full border border-[#DEE3F7] rounded-sm py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary transition" fdprocessedid="a9h1p"/>
                             </div>
                             <div className="mb-8">
                                 <label for="password" className="block text-sm font-medium text-black mb-3"> Your Password </label>
-                                <input type="password" name="password" placeholder="Enter your Password" className="w-full border border-[#DEE3F7] rounded-sm py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary transition" fdprocessedid="2p2scg" />
+                                <input type="password" name="password" placeholder="Enter your Password" className="w-full border border-[#DEE3F7] rounded-sm py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary transition" fdprocessedid="2p2scg"/>
                             </div>
                             {/* <div className="flex items-center justify-between mb-8">
                                 <div>
@@ -82,13 +78,13 @@ export default function Login() {
                             </div> */}
                             <div className="mb-6">
                                 <button className="w-full flex items-center justify-center text-base font-medium text-white bg-primary py-4 px-9 hover:shadow-signUp rounded-sm transition duration-300 ease-in-out" fdprocessedid="57w375u">
-                                    Sign up
+                                    Sign in
                                 </button>
                             </div>
                         </form>
                         <p className="font-medium text-base text-body-color text-center">
-                            Already have an account?
-                            <Link href="/login" className="text-primary hover:underline"> Sign in </Link>
+                            Don&apos;t you have an account?
+                            <Link href="/register" className="text-primary hover:underline"> Sign up </Link>
                         </p>
                     </div>
                 </div>
