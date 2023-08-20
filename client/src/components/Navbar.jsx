@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Navbar() {
     return (
         <header>
@@ -6,13 +8,13 @@ export default function Navbar() {
                     <div className="flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative">
                         <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav" className="hidden peer" />
                         <div className="relative z-20 w-full flex justify-between lg:w-max md:px-0">
-                            <a href="#home" aria-label="logo" className="flex space-x-2 items-center">
+                            <Link href="/" aria-label="logo" className="flex space-x-2 items-center">
                                 <div aria-hidden="true" className="flex space-x-1">
                                     <div className="h-4 w-4 rounded-full bg-gray-900 dark:bg-white"></div>
                                     <div className="h-6 w-2 bg-primary"></div>
                                 </div>
-                                <span className="text-2xl font-bold text-gray-900 dark:text-white">Astrolus</span>
-                            </a>
+                                <span className="text-2xl font-bold text-gray-900 dark:text-white">IPOwiseAI</span>
+                            </Link>
 
                             <div className="relative flex items-center lg:hidden max-h-10">
                                 <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger" className="relative  p-6 -mr-6">
@@ -30,37 +32,37 @@ export default function Navbar() {
                             <div className="text-gray-600 dark:text-gray-300 lg:pr-4 lg:w-auto w-full lg:pt-0">
                                 <ul className="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
                                     <li>
-                                        <a href="#features" className="block md:px-4 transition hover:text-primary">
+                                        <Link href="#features" className="block md:px-4 transition hover:text-primary">
                                             <span>Features</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#solution" className="block md:px-4 transition hover:text-primary">
+                                        <Link href="#solution" className="block md:px-4 transition hover:text-primary">
                                             <span>Solution</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#testimonials" className="block md:px-4 transition hover:text-primary">
+                                        <Link href="#testimonials" className="block md:px-4 transition hover:text-primary">
                                             <span>Testimonials</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#blog" className="block md:px-4 transition hover:text-primary">
+                                        <Link href="#blog" className="block md:px-4 transition hover:text-primary">
                                             <span>Blog</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
 
                             <div className="mt-12 lg:mt-0">
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/login"
                                     className="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                                 >
                                     <span className="relative text-sm font-semibold text-white"
-                                    >Get Started</span
+                                    >Login</span
                                     >
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
