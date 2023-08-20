@@ -74,8 +74,6 @@ export default function Register() {
                 </section>
             )
             }
-            {profession}
-            {ageGroup}
         </main>
     )
 }
