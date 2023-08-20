@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setAgeGroup, setProfession } from '@/utils/userSlice'
+import { setAgeGroup, setProfession } from '/src/utils/userSlice'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
