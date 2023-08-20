@@ -45,7 +45,7 @@ export default function Register() {
                 {!ageSelected && (
                     <section className='flex flex-col items-center gap-7'>
                         <div className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Age Group</div>
-                        <div className='flex gap-5'>
+                        <div className='flex flex-col sm:flex-row gap-5'>
                             {ageCategory.map((data, index) => {
                                 return (
                                     <button key={index} onClick={() => ageHandler(data)} className={`block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${ageGroup === data ? "bg-gray-300" : ""}`}>
@@ -59,7 +59,7 @@ export default function Register() {
                 {ageSelected && (
                     <section className='flex flex-col items-center gap-7'>
                         <div className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Profession</div>
-                        <div className='flex gap-5'>
+                        <div className='flex gap-5 flex-col sm:flex-row'>
                             {professionName.map((data, index) => {
                                 return (
                                     <button key={index} onClick={() => professionHandler(data)} className={`block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${profession === data ? "bg-gray-300" : ""}`}>
