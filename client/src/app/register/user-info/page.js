@@ -48,7 +48,7 @@ export default function Register() {
                         <div className='flex flex-col sm:flex-row gap-5'>
                             {ageCategory.map((data, index) => {
                                 return (
-                                    <button key={index} onClick={() => ageHandler(data)} className={`block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${ageGroup === data ? "bg-gray-300" : ""}`}>
+                                    <button key={index} onClick={() => ageHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${ageGroup === data ? "bg-gray-300" : "bg-white"}`}>
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{data}</h5>
                                     </button>
                                 )
@@ -62,12 +62,12 @@ export default function Register() {
                         <div className='flex gap-5 flex-col sm:flex-row'>
                             {professionName.map((data, index) => {
                                 return (
-                                    <button key={index} onClick={() => professionHandler(data)} className={`block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${profession === data ? "bg-gray-300" : ""}`}>
+                                    <button key={index} onClick={() => professionHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${profession === data ? "bg-gray-300" : "bg-white"}`}>
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{data}</h5>
                                     </button>
                                 )
                             })}
-                            <button onClick={() => setOther(true)} className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <button onClick={() => setOther(true)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${other ? "bg-gray-300" : "bg-white"}`}>
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Others</h5>
                             </button>
                         </div>
