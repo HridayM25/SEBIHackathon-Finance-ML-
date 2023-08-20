@@ -48,7 +48,7 @@ export default function Register() {
                         <div className='flex flex-col sm:flex-row gap-5'>
                             {ageCategory.map((data, index) => {
                                 return (
-                                    <button key={index} onClick={() => ageHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${ageGroup === data ? "bg-gray-300" : "bg-white"}`}>
+                                    <button key={index} onClick={() => ageHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${ageGroup === data ? "bg-gray-300 border-2 border-black" : "bg-white"}`}>
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{data}</h5>
                                     </button>
                                 )
@@ -62,16 +62,22 @@ export default function Register() {
                         <div className='flex gap-5 flex-col sm:flex-row'>
                             {professionName.map((data, index) => {
                                 return (
-                                    <button key={index} onClick={() => professionHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${profession === data ? "bg-gray-300" : "bg-white"}`}>
+                                    <button key={index} onClick={() => professionHandler(data)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${profession === data ? "bg-gray-300 border-2 border-black" : "bg-white"}`}>
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{data}</h5>
                                     </button>
                                 )
                             })}
-                            <button onClick={() => setOther(true)} className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${other ? "bg-gray-300" : "bg-white"}`}>
+                            <button
+                                onClick={() => {
+                                    setOther(true)
+                                    professionHandler("")
+                                }}
+                                className={`block max-w-sm p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 ${other && profession=="" ? "bg-gray-300 border-2 border-black" : "bg-white"}`}
+                            >
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Others</h5>
                             </button>
                         </div>
-                        {other && (
+                        {(other && profession=="") && (
                             <>
                                 <input onChange={(e) => setUserProfession(e.target.value)} type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Teacher" required></input>
                             </>
