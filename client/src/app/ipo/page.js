@@ -12,7 +12,6 @@ import axios from 'axios'
 
 
 export default function IPO() {
-
     const axios = require('axios');
     const [data, setData] = useState({})
 
@@ -29,7 +28,7 @@ export default function IPO() {
     },[])
 
     const valueChangeHandler = async(e) => {
-        const response = await axios.post('/processIPO', {
+        const response = await axios.post('http://localhost:8000/processIPO', {
             IPOIndex: e,
           })
         if (response.ok){
